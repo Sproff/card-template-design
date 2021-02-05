@@ -29,6 +29,7 @@ function CardProduct() {
         overflow="hidden"
         justifyContent="center"
         backgroundColor="#fafafa"
+        boxShadow="2px 2px #ddd"
       >
         <Image src={pr5} height="200px" width="100%" alt="card image" />
         <Box>
