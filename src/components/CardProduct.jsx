@@ -6,6 +6,19 @@ import pr5 from '../assets/images/pr5.jpg';
 function CardProduct() {
   return (
     <Container bg="#fafafa" height="100%">
+      <Text
+        display="flex"
+        bg="tomato"
+        color="#fafafa"
+        textTransform="uppercase"
+        fontSize="1.5rem"
+        fontWeight="bold"
+        justifyContent="center"
+        alignItems="center"
+        py="1rem"
+      >
+        Card Template Design
+      </Text>
       <Box
         width="300px"
         height="100%"
