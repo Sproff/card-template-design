@@ -2,8 +2,6 @@ import React, {useState, useEffect} from 'react';
 import {Container, Box, Text, Image, Badge} from '@chakra-ui/react';
 import axios from 'axios';
 
-import pr5 from '../assets/images/pr5.jpg';
-
 function CardProduct() {
   const [products, setProducts] = useState([]);
 
@@ -14,7 +12,6 @@ function CardProduct() {
     axios
       .get(APP_URL)
       .then((res) => {
-        console.log(res.data);
         setProducts(res.data);
       })
       .catch((err) => console.log(err));
@@ -36,7 +33,7 @@ function CardProduct() {
         Card Template Design
       </Text>
 
-      {products.map((product, index) => (
+      {products.map((product) => (
         <Box
           width="300px"
           height="100%"
@@ -71,7 +68,12 @@ function CardProduct() {
             <Text fontSize="1rem" fontWeight="bold">
               {product.name}
             </Text>
-            <Text fontSize=".8rem" fontWeight="light" p="1rem 0" opacity="0.8">
+            <Text
+              fontSize=".8rem"
+              fontWeight="lighter"
+              p="1rem 0"
+              opacity="0.8"
+            >
               {product.desc}
             </Text>
           </Box>
