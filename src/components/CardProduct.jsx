@@ -39,12 +39,12 @@ function CardProduct() {
           height="100%"
           maxW="100%"
           border=".1px solid #f0f0f0"
-          margin="2rem"
+          margin="2rem auto"
           borderRadius="10px"
           overflow="hidden"
           justifyContent="center"
           backgroundColor="#fafafa"
-          boxShadow="2px 2px #ddd"
+          boxShadow="1px 2px 1px 2px #ddd"
         >
           <Image
             src={product.image}
