@@ -1,21 +1,38 @@
 import React, {useState, useEffect} from 'react';
-import {Container, Box, Text, Image, Badge} from '@chakra-ui/react';
+import {Container, Box, Text, Image, Badge, Spinner} from '@chakra-ui/react';
 import axios from 'axios';
 
 function CardProduct() {
   const [products, setProducts] = useState([]);
+  const [loader, setLoader] = useState(true);
 
   useEffect(() => {
-    const APP_URL =
-      'https://cors-anywhere.herokuapp.com/https://ecommerce-product-api.herokuapp.com/';
+    const APP_URL = 'https://ecommerce-product-api.herokuapp.com/';
 
     axios
       .get(APP_URL)
       .then((res) => {
         setProducts(res.data);
+        setLoader(false);
       })
       .catch((err) => console.log(err));
   }, []);
+
+  if (loader) {
+    return (
+      <Spinner
+        // thickness="4px"
+        // speed="0.65s"
+        // emptyColor="gray.200"
+        // color="blue.500"
+        size="xl"
+        // display="flex"
+        // justifyContent="center"
+        // alignItems="center"
+        // height="100vh"
+      />
+    );
+  }
 
   return (
     <Container bg="#fafafa" height="100%">
