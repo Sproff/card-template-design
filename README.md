@@ -1,6 +1,6 @@
-# Boilerplate - still in development
+## Card Template Design - still in development
 
-Boilerplate for implementing a card template design using an API.
+Reusable component for implementing a card design using an API.
 
 ## Available Scripts
 
