@@ -1,8 +1,8 @@
-import CardProduct from './components/CardProduct';
+import Routes from './routes/Routes';
 function App() {
   return (
     <div className="App">
-      <CardProduct />
+      <Routes />
     </div>
   );
 }
